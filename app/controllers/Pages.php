@@ -9,10 +9,15 @@
         public function index(){
             // echo 'index';
             // $this->view('hello');
-            $this->view('index');
+            $data = [
+                'title' => 'Welcome'
+            ];
+            
+            $this->view('pages/index');
         }
 
-        public function about($id){
+        public function about(){
             // echo $id;
+            $this->view('pages/about');
         }
     }
