@@ -7,6 +7,8 @@
     
     class Controller
     {
+        public $postModel;
+
         // Load model
         public function model($model){
             // Require model file

@@ -10,7 +10,7 @@
 
         public function getPosts ()
         {
-            $this->db->query("");
+            $this->db->query("SELECT * FROM [STT_EXPORT].[dbo].[MODEL_MASTER]");
             $results = $this->db->resultSet();
             return $results;
         }

@@ -32,7 +32,7 @@
             {
                 $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
                 // $this->dbh = new PDO($dsn, $this->user, $this->pass);
-                echo 'connected' . '<br>';
+                // echo 'connected' . '<br>';
             }
             catch(PDOException $e)
             {
@@ -50,7 +50,7 @@
         // Bind values
         public function bind($param, $value, $type = null)
         {
-            if(is_null(true))
+            if(is_null($type))
             {
                 switch(true){
                     case is_int($value):
@@ -64,6 +64,7 @@
                         break;
                     default:
                         $type = PDO::PARAM_STR;
+                        break;
                 }
             }
 
@@ -80,6 +81,11 @@
         public function resultSet()
         {
             $this->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+        }
+
+        public function single()
+        {
             return $this->stmt->fetch(PDO::FETCH_OBJ);
         }
 
