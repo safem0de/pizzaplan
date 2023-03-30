@@ -11,7 +11,7 @@
             if($_SERVER['REQUEST_METHOD'] == 'POST')
             {
                 // Sanitize Post Data
-                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+                $_POST = filter_input_array(INPUT_POST);
 
                 // Init Data
                 $data = [
@@ -36,10 +36,22 @@
                     $data['line_err'] = 'Please enter line';
                 }
 
-                // Validate line
+                // Validate planlot
                 if(empty($data['planlot']))
                 {
                     $data['planlot_err'] = 'Please enter plan lot';
+                }
+
+                // Validate procode
+                if(empty($data['procode']))
+                {
+                    $data['procode_err'] = 'Please enter pro code';
+                }
+
+                // Validate ponumber
+                if(empty($data['ponumber']))
+                {
+                    $data['ponumber_err'] = 'Please enter p/o number';
                 }
 
                 if( empty($data['line_err']) && empty($data['planlot_err']) && empty($data['procode_err']) &&

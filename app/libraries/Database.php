@@ -30,7 +30,7 @@
 
             try
             {
-                $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
+                // $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
                 // $this->dbh = new PDO($dsn, $this->user, $this->pass);
                 // echo 'connected' . '<br>';
             }
