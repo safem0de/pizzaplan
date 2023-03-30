@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="../../../../vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../../vendor/fontawesome-free-6.3.0-web/css/all.min.css">
     <link rel="stylesheet" href="../../../../vendor/sweetalert2-11.7.3/package/dist/sweetalert2.min.js">
-    <link rel="icon" href="../../../vendor/favicon.ico" type="image/x-icon">Department
-
+    <link rel="icon" href="../../../vendor/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
