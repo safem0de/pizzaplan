@@ -9,7 +9,12 @@
                 <div class="card-body">
                     <div class="mb-3">
                         <label for="lbl_Line" class="form-label"><strong>Line :</strong> <sup style="color: red;">*</sup></label>
-                        <input type="text" class="form-control" name="input_line" placeholder="Line" value="<?php echo $data['line']; ?>">
+                        <input 
+                            type="text" 
+                            class="form-control <?php echo (!empty($data['line_err'])) ? 'is-invalid' : ''; ?>" 
+                            name="line" 
+                            placeholder="Line" 
+                            value="<?php echo $data['line']; ?>">
                         <span class="invalid-feedback"><?php echo $data['line_err']; ?></span>
                     </div>
                     <div class="mb-3">
