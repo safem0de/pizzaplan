@@ -22,17 +22,12 @@
         public function __construct()
         {
             // Set DSN
-            $dsn = 'sqlsrv:Server='. $this->host .';Database=' . $this->dbname;
-            $options = array(
-                PDO::ATTR_PERSISTENT => true,
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            );
+            $dsn = "sqlsrv:Server=$this->host;Database=$this->dbname;ConnectionPooling=0";
 
             try
             {
-                // $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
-                // $this->dbh = new PDO($dsn, $this->user, $this->pass);
-                // echo 'connected' . '<br>';
+                $this->dbh = new PDO($dsn, $this->user, $this->pass);
+                $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
             catch(PDOException $e)
             {
@@ -64,7 +59,6 @@
                         break;
                     default:
                         $type = PDO::PARAM_STR;
-                        break;
                 }
             }
 

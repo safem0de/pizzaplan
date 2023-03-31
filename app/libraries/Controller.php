@@ -8,6 +8,7 @@
     class Controller
     {
         public $postModel;
+        public $planModel;
 
         // Load model
         public function model($model){

@@ -3,7 +3,7 @@
     {
         public function __construct()
         {
-            
+            $this->planModel = $this->model('Plan');
         }
 
         public function inputplan()
@@ -27,6 +27,7 @@
                     'procode_err' => '',
                     'ponumber_err' => '',
                     'qty_err' => '',
+                    'description_err' => '',
                     'productiondate_err' => ''
                 ];
 
@@ -54,10 +55,36 @@
                     $data['ponumber_err'] = 'Please enter p/o number';
                 }
 
+                // Validate ponumber
+                if(empty($data['description']))
+                {
+                    $data['description_err'] = 'Please enter description';
+                }
+
+                // Validate quantity
+                if(empty($data['qty']))
+                {
+                    $data['qty_err'] = 'Please enter quantity';
+                }
+
+                // Validate productiondate
+                if(empty($data['productiondate']))
+                {
+                    $data['productiondate_err'] = 'Please enter production date';
+                }
+
                 if( empty($data['line_err']) && empty($data['planlot_err']) && empty($data['procode_err']) &&
                     empty($data['ponumber_err']) && empty($data['qty_err']) && empty($data['productiondate_err']))
                 {
-                    die('SUCCESS');
+
+                    if($this->planModel->insertplan($data))
+                    {
+                        redirect('plans/inputplan');
+                    }
+                    else
+                    {
+                        die('SOMETHING WENT WRONG');
+                    }
                 }
                 else
                 {
