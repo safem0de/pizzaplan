@@ -83,4 +83,15 @@
         </div>
     </div>
 </form>
+
+    <!-- <script>
+        Swal.fire({
+            title: 'ยินดีต้อนรับ',
+            text: 'เข้าสู่เว็บไซต์ Devdit',
+            icon: 'success',
+            confirmButtonText: 'ยอดเยี่ยมเลย'
+        });
+    </script> -->
+    <?php flash('test') ?>
+
 <?php require APPROOT . '/views/inc/footer.php'; ?>

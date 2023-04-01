@@ -76,15 +76,20 @@
                 if( empty($data['line_err']) && empty($data['planlot_err']) && empty($data['procode_err']) &&
                     empty($data['ponumber_err']) && empty($data['qty_err']) && empty($data['productiondate_err']))
                 {
+                    flash('test', $data['planlot']);
+                    redirect('plans/inputplan');
 
-                    if($this->planModel->insertplan($data))
-                    {
-                        redirect('plans/inputplan');
-                    }
-                    else
-                    {
-                        die('SOMETHING WENT WRONG');
-                    }
+                    // die("SUCCESS");
+                    // refresh_page(2,'plans/inputplan');
+
+                    // if($this->planModel->insertplan($data))
+                    // {
+                    //     redirect('plans/inputplan');
+                    // }
+                    // else
+                    // {
+                    //     die('SOMETHING WENT WRONG');
+                    // }
                 }
                 else
                 {

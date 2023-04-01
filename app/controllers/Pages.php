@@ -8,11 +8,11 @@
 
         public function index(){
 
-            $posts = $this->postModel->getPosts();
+            // $posts = $this->postModel->getPosts();
 
             $data = [
                 'title' => 'Welcome',
-                'posts' => $posts
+                // 'posts' => $posts
             ];
             
             $this->view('pages/index', $data);
