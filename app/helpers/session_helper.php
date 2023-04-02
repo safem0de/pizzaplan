@@ -21,7 +21,7 @@
                 "
                 <script>
                 Swal.fire({
-                    title: 'Plan was uploaded',
+                    title: 'plan was uploaded',
                     // icon: 'success',
                     html:'" . $_SESSION[$name] . "',
                     confirmButtonText: 'OK',

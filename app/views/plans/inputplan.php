@@ -79,7 +79,7 @@
                         <label for="formFileSm" class="form-label text-muted">
                             Please select plan(file) for upload
                         </label>
-                        <input class="form-control form-control-sm text-muted" id="formFileSm" type="file" disabled>
+                        <input class="form-control form-control-sm" id="formFileSm" type="file" disabled>
                     </div>
                     <button type="button" class="btn btn-primary" disabled>
                         <i class="fa-solid fa-upload"></i>
