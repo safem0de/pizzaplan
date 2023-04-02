@@ -76,11 +76,18 @@
                 if( empty($data['line_err']) && empty($data['planlot_err']) && empty($data['procode_err']) &&
                     empty($data['ponumber_err']) && empty($data['qty_err']) && empty($data['productiondate_err']))
                 {
-                    flash('test', $data['planlot']);
-                    redirect('plans/inputplan');
+                    $date_string = date('d F Y', strtotime($data['productiondate']));
 
-                    // die("SUCCESS");
-                    // refresh_page(2,'plans/inputplan');
+                    $info_status = "" .
+                    "<b>Line     &emsp; : &emsp;</b>" . $data['line'] .  "<br/><br/>" .
+                    "<b>Plan lot &emsp; : &emsp;</b>" . $data['planlot'] .  "<br/><br/>" .
+                    "<b>Pro code &emsp; : &emsp;</b>" . $data['procode'] .  "<br/><br/>" .
+                    "<b>PO Number &emsp;: &emsp;</b>" . $data['ponumber'] . "<br/><br/>" .
+                    "<b>Quantity &emsp; : &emsp;</b>" . $data['qty'] .  "&emsp; unit<br/><br/>".
+                    "<b>Production date : &emsp;</b>" . $date_string .  "<br/>";
+                    
+                    flash('upload_status', $info_status);
+                    redirect('plans/inputplan');
 
                     // if($this->planModel->insertplan($data))
                     // {

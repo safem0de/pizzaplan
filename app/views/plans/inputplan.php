@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <form method="POST" action="<?php echo URLROOT ?>/plans/inputplan">
     <div class="row">
-        <div class="col-sm-6 col-md-6 mx-auto my-auto">
+        <div class="col-sm-6 col-md-5 col-lg-4 mx-auto my-auto">
             <div class="card mt-2">
                 <div class="card-header bg-info text-white">
                     <h3>INPUT PLANLOT STT_EXPORT</h3>
@@ -84,14 +84,6 @@
     </div>
 </form>
 
-    <!-- <script>
-        Swal.fire({
-            title: 'ยินดีต้อนรับ',
-            text: 'เข้าสู่เว็บไซต์ Devdit',
-            icon: 'success',
-            confirmButtonText: 'ยอดเยี่ยมเลย'
-        });
-    </script> -->
-    <?php flash('test') ?>
+    <?php flash('upload_status') ?>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>

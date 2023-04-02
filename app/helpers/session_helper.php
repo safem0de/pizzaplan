@@ -21,7 +21,10 @@
                 "
                 <script>
                 Swal.fire({
-                    title: 'Plan lot : " . $_SESSION[$name] . " is uploaded',
+                    title: 'Plan was uploaded',
+                    // icon: 'success',
+                    html:'" . $_SESSION[$name] . "',
+                    confirmButtonText: 'OK',
                     width: 600,
                     padding: '3em',
                     color: '#716add',
