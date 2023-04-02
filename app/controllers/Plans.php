@@ -95,7 +95,7 @@
                     // }
                     // else
                     // {
-                    //     die('SOMETHING WENT WRONG');
+                    //     die('SOMETHING WENT WRONG CONTACT MFD - 2201');
                     // }
                 }
                 else

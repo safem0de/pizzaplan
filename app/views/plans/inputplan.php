@@ -4,7 +4,7 @@
         <div class="col-sm-6 col-md-5 col-lg-4 mx-auto my-auto">
             <div class="card mt-2">
                 <div class="card-header bg-info text-white">
-                    <h3>INPUT PLANLOT STT_EXPORT</h3>
+                    INPUT PLANLOT STT_EXPORT
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
@@ -74,7 +74,14 @@
                         <i class="fa-regular fa-floppy-disk"></i>
                         Save
                     </button>
-                    <button type="button" class="btn btn-primary">
+                    <hr />
+                    <div class="mb-3">
+                        <label for="formFileSm" class="form-label text-muted">
+                            Please select plan(file) for upload
+                        </label>
+                        <input class="form-control form-control-sm text-muted" id="formFileSm" type="file" disabled>
+                    </div>
+                    <button type="button" class="btn btn-primary" disabled>
                         <i class="fa-solid fa-upload"></i>
                         Upload
                     </button>
@@ -84,6 +91,6 @@
     </div>
 </form>
 
-    <?php flash('upload_status') ?>
+<?php flash('upload_status') ?>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>

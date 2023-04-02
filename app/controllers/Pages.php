@@ -7,22 +7,19 @@
         }
 
         public function index(){
-
-            // $posts = $this->postModel->getPosts();
-
-            $data = [
-                'title' => 'Welcome',
-                // 'posts' => $posts
-            ];
-            
-            $this->view('pages/index', $data);
+            // $data = [
+            //     'title' => 'Welcome',
+            // ];
+            // $this->view('pages/index', $data);
+            redirect('plans/inputplan');
         }
 
         public function about(){
-            $data = [
-                'title' => 'About us',
-            ];
-            $this->view('pages/about', $data);
+            // $data = [
+            //     'title' => 'About us',
+            // ];
+            // $this->view('pages/about', $data);
+            redirect('plans/inputplan');
         }
 
     }
