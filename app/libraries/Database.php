@@ -23,16 +23,16 @@
         {
             // Set DSN
             
-            // $dsn = "sqlsrv:Server=$this->host;Database=$this->dbname;ConnectionPooling=0";
-            $dsn = "mysql:host=".$this->host.";dbname=".$this->dbname.";";
+            $dsn = "sqlsrv:Server=$this->host;Database=$this->dbname;ConnectionPooling=0";
+            // $dsn = "mysql:host=".$this->host.";dbname=".$this->dbname.";";
 
             try
             {
-                // $this->dbh = new PDO($dsn, $this->user, $this->pass);
-                // $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                $this->dbh = new PDO($dsn, $this->user);
+                $this->dbh = new PDO($dsn, $this->user, $this->pass);
                 $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                // $this->dbh = new PDO($dsn, $this->user);
+                // $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             }
             catch(PDOException $e)

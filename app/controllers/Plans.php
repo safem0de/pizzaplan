@@ -86,17 +86,18 @@
                     "<b>Quantity &emsp; : &emsp;</b>" . $data['qty'] .  "&emsp; unit<br/><br/>".
                     "<b>Production date : &emsp;</b>" . $date_string .  "<br/>";
                     
-                    flash('upload_status', $info_status);
-                    redirect('plans/inputplan');
+                    // flash('upload_status', $info_status);
+                    // redirect('plans/inputplan');
 
-                    // if($this->planModel->insertplan($data))
-                    // {
-                    //     redirect('plans/inputplan');
-                    // }
-                    // else
-                    // {
-                    //     die('SOMETHING WENT WRONG CONTACT MFD - 2201');
-                    // }
+                    if($this->planModel->insertplan($data))
+                    {
+                        flash('upload_status', $info_status);
+                        redirect('plans/inputplan');
+                    }
+                    else
+                    {
+                        die('SOMETHING WENT WRONG CONTACT MFD - 2201');
+                    }
                 }
                 else
                 {
